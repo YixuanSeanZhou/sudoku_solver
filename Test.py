@@ -1,53 +1,49 @@
 import Sudoku as S
 
-sudoku = [[5,6,1,8,4,7,9,2,3]]
+INSTRUCTION = 'Enter A list of the value in a Sudoku for one row, and press enter for the next row, use 0 to mark as those empty spaces, and use \',\' to seperate each column in this row.'
 
-sudoku.append([3,0,9,0,0,0,6,0,0])
+sudoku = []
+print(INSTRUCTION)
 
-sudoku.append([4,2,8,9,6,3,1,7,5])
+for i in range(0,9):
+    sudoku_int_row = []
+    sudoku_row = input()
+    row = sudoku_row.split(',')
+    if(len(row) != 9):
+        print('Wrong input for this row')
+        exit()
+    else:
 
-sudoku.append([0,1,0,0,8,0,0,4,0])
+        for num in row:
+            if (int(num) > 9 or int(num) < 0):
+                print('Error Number in a Sudoku')
+                exit()
+            else:
+                sudoku_int_row.append(int(num))
+        sudoku.append(sudoku_int_row)
 
-sudoku.append([7,9,0,6,0,2,0,1,8])
 
-sudoku.append([0,5,0,0,3,0,0,9,0])
 
-sudoku.append([9,3,5,4,7,8,2,6,1])
-
-sudoku.append([1,4,6,2,9,5,8,3,7])
-
-sudoku.append([2,8,7,3,1,6,0,5,9])
-
-sudoku = [[5,3,0,0,7,0,0,0,0]]
-
-sudoku.append([6,0,0,1,9,5,0,0,0])
-sudoku.append([0,9,8,0,0,0,0,6,7])
-sudoku.append([8,0,0,0,6,0,0,0,3])
-sudoku.append([4,0,0,8,0,3,0,0,1])
-sudoku.append([7,0,0,0,2,0,0,0,6])
-sudoku.append([0,6,0,0,0,0,2,8,4])
-sudoku.append([0,0,0,4,1,9,0,0,5])
-sudoku.append([0,0,0,0,8,0,0,7,9])
 
 for i in range (0,9):
     print(sudoku[i])
 
 
-print()
-
-# sudoku_1 = S.check_num(sudoku)
-# for i in range (0,9):
-#     print(sudoku_1[i])
 # print()
 #
-
-soduku_tryFill = S.fill_in(sudoku)
-
-for i in range(0, len(soduku_tryFill)):
-    print(soduku_tryFill[i])
-
-
-
+# # sudoku_1 = S.check_num(sudoku)
+# # for i in range (0,9):
+# #     print(sudoku_1[i])
+# # print()
+# #
+#
+# soduku_tryFill = S.fill_in(sudoku)
+#
+# for i in range(0, len(soduku_tryFill)):
+#     print(soduku_tryFill[i])
+#
+#
+#
 
 # print(soduku_tryFill)
 # #print(sudoku[1][1])
