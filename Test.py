@@ -29,36 +29,9 @@ for i in range (0,9):
     print(sudoku[i])
 
 
-# print()
-#
-# # sudoku_1 = S.check_num(sudoku)
-# # for i in range (0,9):
-# #     print(sudoku_1[i])
-# # print()
-# #
-#
-# soduku_tryFill = S.fill_in(sudoku)
-#
-# for i in range(0, len(soduku_tryFill)):
-#     print(soduku_tryFill[i])
-#
-#
-#
+print()
 
-# print(soduku_tryFill)
-# #print(sudoku[1][1])
+soduku_tryFill = S.fill_in(sudoku)
 
-
-#
-# def test_r(x):
-#     n = x
-#     print(n)
-#     if x == 0 :
-#         return x
-#     else :
-#         print(x)
-#         a = test_r(x-1) + 1
-#         print(x)
-#         return a
-#
-# test_r(2)
+for i in range(0, len(soduku_tryFill)):
+    print(soduku_tryFill[i])
